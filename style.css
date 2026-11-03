@@ -1,0 +1,311 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #fff0f5;
+    font-family: 'Poppins', sans-serif;
+    color: #98566d;
+    overflow-x: hidden;
+}
+
+.page {
+    min-height: 100vh;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    text-align: center;
+}
+
+.page.active {
+    display: flex;
+    animation: fadeIn 1s ease;
+}
+
+.envelope, .letter-box {
+    background: #fffafc;
+    padding: 40px 30px;
+    width: 100%;
+    max-width: 450px;
+    border: 2px solid #f5c6d5;
+    border-radius: 25px;
+    box-shadow: 0 10px 30px #e8b8ca70;
+}
+
+.content {
+    max-width: 500px;
+    background: #fffafc;
+    padding: 45px 30px;
+    border: 2px dashed #e9b5c7;
+    border-radius: 30px;
+    box-shadow: 0 10px 30px #e8b8ca70;
+}
+
+.bow {
+    font-size: 55px;
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 38px;
+    color: #c56e8d;
+    margin-bottom: 15px;
+}
+
+h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 28px;
+    color: #d88ba5;
+    margin: 15px 0;
+}
+
+p {
+    font-size: 14px;
+    line-height: 2;
+    margin: 20px 0;
+}
+
+button {
+    background: #e9a9bd;
+    color: white;
+    border: none;
+    padding: 13px 25px;
+    border-radius: 30px;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 15px;
+}
+
+button:hover {
+    background: #cf829f;
+    transform: scale(1.05);
+}
+
+.letter-box {
+    max-height: 85vh;
+    overflow-y: auto;
+}
+
+.letter-box p {
+    text-align: left;
+}
+
+.gift {
+    font-size: 70px;
+    margin-bottom: 20px;
+}
+
+.ribbon {
+    font-size: 45px;
+    margin: 20px;
+}
+
+.decoration {
+    font-size: 30px;
+}
+
+#musicButton {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 10;
+    border: 1px solid white;
+    box-shadow: 0 3px 10px #d88ba5;
+}
+
+.hearts {
+    position: fixed;
+    top: 15px;
+    right: 25px;
+    font-size: 45px;
+    color: #e9a9bd;
+    animation: float 3s infinite ease-in-out;
+    pointer-events: none;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 30px;
+    }
+
+    .content, .envelope, .letter-box {
+        padding: 30px 20px;
+    }
+}
+
+/* BIRTHDAY CAKE */
+
+.cake-container {
+    display: flex;
+    justify-content: center;
+    margin: 55px 0 25px;
+}
+
+.cake {
+    position: relative;
+    width: 180px;
+    height: 130px;
+    animation: cakeFloat 3s ease-in-out infinite;
+}
+
+/* LILIN */
+
+.candle {
+    position: absolute;
+    width: 13px;
+    height: 45px;
+    background: repeating-linear-gradient(
+        45deg,
+        #f4a9c4,
+        #f4a9c4 5px,
+        #fff0f5 5px,
+        #fff0f5 10px
+    );
+    top: -35px;
+    left: 84px;
+    z-index: 5;
+    border-radius: 4px;
+}
+
+.flame {
+    position: absolute;
+    width: 17px;
+    height: 25px;
+    background: #ffb347;
+    border-radius: 50% 50% 50% 50%;
+    top: -25px;
+    left: -2px;
+    box-shadow: 0 0 15px #ffb347;
+    transform-origin: bottom;
+    animation: flicker 0.5s infinite alternate;
+}
+
+.flame::after {
+    content: "";
+    position: absolute;
+    width: 7px;
+    height: 13px;
+    background: #fff3a3;
+    border-radius: 50%;
+    top: 8px;
+    left: 5px;
+}
+
+.smoke {
+    display: none;
+    position: absolute;
+    top: -45px;
+    left: -5px;
+    color: #aaa;
+    font-size: 25px;
+    animation: smokeUp 1.5s ease-out forwards;
+}
+
+.flame.out {
+    display: none;
+}
+
+.smoke.show {
+    display: block;
+}
+
+/* LAPISAN KUE */
+
+.cake-top {
+    position: absolute;
+    width: 180px;
+    height: 22px;
+    background: #ffd6e5;
+    border-radius: 50%;
+    top: 10px;
+    z-index: 3;
+    border-bottom: 5px solid #e9a9bd;
+}
+
+.cake-layer {
+    position: absolute;
+    border-radius: 8px 8px 15px 15px;
+    left: 0;
+}
+
+.layer-one {
+    width: 180px;
+    height: 35px;
+    background: #f4a9c4;
+    top: 20px;
+}
+
+.layer-two {
+    width: 160px;
+    height: 35px;
+    background: #ffe0eb;
+    top: 50px;
+    left: 10px;
+}
+
+.layer-three {
+    width: 140px;
+    height: 35px;
+    background: #e9a9bd;
+    top: 80px;
+    left: 20px;
+}
+
+/* ANIMASI */
+
+@keyframes flicker {
+    from {
+        transform: rotate(-5deg) scale(1);
+    }
+
+    to {
+        transform: rotate(5deg) scale(1.1);
+    }
+}
+
+@keyframes cakeFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+@keyframes smokeUp {
+    from {
+        opacity: 0.8;
+        transform: translateY(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateY(-35px);
+    }
+}

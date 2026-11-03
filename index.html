@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>A Little Birthday Surprise 🎀</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Poppins:wght@300;400;500&family=Dancing+Script:wght@500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="hearts">♡</div>
+
+    <!-- HALAMAN PEMBUKA -->
+    <section id="opening" class="page active">
+
+        <div class="envelope">
+            <div class="bow">🎀</div>
+
+            <h1>A Little Surprise</h1>
+            <p>Someone special has a message for you.</p>
+
+            <button onclick="openLetter()">Open Me ♡</button>
+        </div>
+
+    </section>
+
+
+    <!-- HALAMAN ULANG TAHUN -->
+    <section id="birthday" class="page">
+
+        <div class="content">
+
+            <span class="decoration">୨୧</span>
+
+            <h1>Happy Birthday!</h1>
+
+            <h2>To My Favorite Person ♡</h2>
+
+            <!-- BIRTHDAY CAKE -->
+<div class="cake-container">
+
+    <div class="cake">
+
+        <!-- LILIN -->
+        <div class="candle">
+            <div class="flame" id="flame"></div>
+            <div class="smoke" id="smoke">〰</div>
+        </div>
+
+        <!-- KUE -->
+        <div class="cake-top"></div>
+        <div class="cake-layer layer-one"></div>
+        <div class="cake-layer layer-two"></div>
+        <div class="cake-layer layer-three"></div>
+
+    </div>
+
+</div>
+
+<h2 id="wishText">
+    Make a wish, birthday girl! 🎀
+</h2>
+
+<button id="blowButton" onclick="blowCandle()">
+    🌬️ Blow the Candle!
+</button>
+
+            <p>
+                Today is all about you!
+                Semoga hari ini dipenuhi kebahagiaan,
+                tawa, dan banyak hal indah.
+            </p>
+
+            <div class="ribbon">🎀</div>
+
+            <button onclick="showLetter()">
+                Read My Letter ♡
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- HALAMAN SURAT -->
+    <section id="letter" class="page">
+
+        <div class="letter-box">
+
+            <div class="bow">🎀</div>
+
+            <h1>A Special Letter</h1>
+
+            <p>
+                Dear Nova,
+                <br><br>
+
+                Happy birthday yaa!
+                Selamat ulang tahun, terima kasih sudah mau menjadi teman baikku, selalu menanyakan kabarku, 
+                dan selalu ingat hari ulang tahunku. mungkin hadiahku ini ngga seberapa dari banyaknya kado yang kamu dapat.
+                fresh flower bisa layu seiring berjalannya waktu, barang juga bisa usang dan berdebu. tapi semoga ucapan sederhana
+                ini bisa membuatmu selalu ingat sama aku.
+                <br><br>
+
+                I hope you always find reasons to smile,
+                even on your hardest days.
+                Jangan lupa bahagia, jangan terlalu keras
+                pada diri sendiri, dan tetap jadi dirimu
+                yang luar biasa.
+                <br><br>
+
+                Semoga semua impianmu satu per satu
+                menemukan jalannya untuk menjadi nyata.
+                You deserve all the happiness in this world.
+                <br><br>
+
+                With lots of love,
+                <br>
+                Nara ♡
+            </p>
+
+            <button onclick="showSurprise()">
+                One More Surprise ♡
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- HALAMAN KEJUTAN -->
+    <section id="surprise" class="page">
+
+        <div class="content">
+
+            <div class="gift">🎁</div>
+
+            <h1>One Last Thing...</h1>
+
+            <p>
+                Seperti lirik lagunya;
+                Semoga bahagia selalu hidupmu, doaku untukmu bentuk cinta yang tulus.
+                Semoga indah cerah selalu jalanmu, laguku untukmu bentuk cinta yang biru
+
+            <br><br>
+
+                Thank you for being you.
+                Stay happy, stay healthy, and keep shining!
+            </p>
+
+            <h2>Once Again, Happy Birthday! ♡</h2>
+
+            <span class="decoration">🎀 ♡ 🎀</span>
+
+            <button onclick="goHome()">
+                Back to Beginning
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- MUSIK -->
+    <audio id="bgMusic" loop playsinline>
+        <source src="music/lagu Biru 1 menit.mp3" type="audio/mpeg">
+    </audio>
+
+    <button id="musicButton" onclick="toggleMusic()">
+        ♫ Music
+    </button>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
